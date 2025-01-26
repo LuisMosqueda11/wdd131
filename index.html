@@ -3,54 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcelona, Spain</title>
-    <link rel="stylesheet" href="styles/place.css">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Overview of HTML, CSS, and JavaScript fundamentals.">
+    <meta name="author" content="Luis Carlo Mosqueda Avila">
+    <title>WDD 131 - Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Barcelona, Spain</h1>
-    </header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight-name">Luis Carlo Mosqueda Avila</span></h1>        
+        <nav class="sub-header">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/luis-mosqueda-646b392b8/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p45-p46#p45" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>    
 
-    <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/barcelona.webp 600w, images/barcelona.webp 1200w" type="image/webp" >
-                <img src="images/barcelona.webp" alt="Barcelona" class="hero-image">
-            </picture>
-            <div class="overlay">
-                <div class="data">
-                    <div class="title">Data</div>
-                    <ul>
-                        <li><strong>Area:</strong> 101.9 sq km</li>
-                        <li><strong>Population:</strong> 1,636,762</li>
-                        <li><strong>Capital:</strong> Barcelona</li>
-                        <li><strong>Languages:</strong> Catalan, Spanish</li>
-                        <li><strong>Currency:</strong> Euro (€)</li>
-                        <li><strong>Time Zone:</strong> UTC+1</li>
-                        <li><strong>Calling Code:</strong> +34</li>
-                        <li><strong>Internet TLD:</strong> .es</li>
-                    </ul>
-                </div>
-                <section class="weather">
-                    <div class="title">
-                        <div>Weather</div>
-                        <img src="images/weather.svg" alt="Sunny Weather Icon" class="weather-icon">
-                    </div>
-                    <ul>
-                        <li><strong>Temperature:</strong> 10°C</li>
-                        <li><strong>Conditions:</strong> Partly Cloudy</li>
-                        <li><strong>Wind:</strong> 5 km/h</li>
-                        <li><strong>Wind Chill:</strong> 9.8°C</li>
-                    </ul>
-                </section>
+    <main class="container">
+        <section class="card card-about-me">
+            <h2 class="card-header">About Me</h2>
+            <p>
+                I am Luis Mosqueda, from Tijuana, Baja California. I have been programming informally and self-taught 
+                for about a year, which has allowed me to grow my skills. For that reason, I am excited to participate 
+                in this course. Among my interests, I enjoy spending time with my family, playing sports (like soccer and volleyball), 
+                and seeking spiritual experiences. This is a brief introduction about myself.
+            </p>
+            <div class="about-me-image-container">
+                <img src="images/aboutme.jpeg" alt="Luis Mosqueda">
             </div>
-        </div>
+        </section>
+
+        <section class="card card-web-resources">
+            <h2 class="card-header">Web Dev Resources</h2>
+            <ul>
+                <li><a href="#" target="_blank">Dev.to Community</a></li>
+                <li><a href="#" target="_blank">Smashing Magazine</a></li>
+                <li><a href="#" target="_blank">CSS Tricks</a></li>
+                <li><a href="#" target="_blank">W3 Schools</a></li>
+                <li><a href="#" target="_blank">Udemy</a></li>
+                <li><a href="#" target="_blank">Image Placeholder</a></li>
+            </ul>
+        </section>
+
+        <section class="card card-country">
+            <h2 class="card-header">Tijuana, Mexico</h2>
+            <div class="country-content">
+                <p>
+                    Tijuana is a vibrant city located at the border of Mexico and the United States. Known for its bustling streets, 
+                    cultural diversity, and incredible cuisine, it is a hub of both tourism and commerce. Tijuana is a city that 
+                    bridges nations, offering a mix of Mexican traditions and modern innovations.
+                </p>
+                <img src="images/mexico.jpeg" alt="Tijuana, Mexico">
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span> Mosqueda Luis Carlo, Mexico</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span></p>
+        <p>Luis Carlo Mosqueda, Mexico</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
