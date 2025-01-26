@@ -15,7 +15,10 @@
 
     <main>
         <div class="hero">
-            <img src="images/barcelona.webp" alt="Barcelona" class="hero-image">
+            <picture>
+                <source srcset="images/barcelona.webp 600w, images/barcelona.webp 1200w" type="image/webp" >
+                <img src="images/barcelona.webp" alt="Barcelona" class="hero-image">
+            </picture>
             <div class="overlay">
                 <div class="data">
                     <div class="title">Data</div>
@@ -33,7 +36,7 @@
                 <section class="weather">
                     <div class="title">
                         <div>Weather</div>
-                        <img src="images/weather.png" alt="Sunny Weather Icon" class="weather-icon">
+                        <img src="images/weather.svg" alt="Sunny Weather Icon" class="weather-icon">
                     </div>
                     <ul>
                         <li><strong>Temperature:</strong> 10°C</li>
@@ -46,7 +49,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Mosqueda Luis Carlo, Mexico</p>
+        <p>&copy; <span id="currentyear"></span> Mosqueda Luis Carlo, Mexico</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
