@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #A50044; 
+    --secondary-color: #004C99; 
+    --background-color: #D3DADE; 
+    --text-color: #1A1A1A;
+    --accent-color: #FFD700; 
+    --heading-font: 'Bebas Neue', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--text-color);
+    margin: 0;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--heading-font);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.card h2 {
+    color: var(--accent-color);
+}
+
+.card p {
+    color: var(--text-color);
+}
