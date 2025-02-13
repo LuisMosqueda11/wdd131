@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="images/icono.png">
+        <title>Mes que un fan</title>
+        <link rel="stylesheet" href="styles/barcaStyle.css">
+        <script src="script/barcaScript.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <div class="logo">Més que un fan</div>
+        <button class="hamburger-menu" aria-label="Open Menu">&#9776;</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">History</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="#">Log in</a></li>
+            </ul>
+        </nav>
+            <div class="cta-buttons">
+                <div class="options-dropdown">
+                    <button class="options-btn">🌐 Language</button>
+                    <div class="options">
+                        <a href="indexS.html">Español</a>
+                        <a href="index.html">English</a>
+                    </div>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+            </div>
+    </header>
+    <section class="title">
+        <div class="title-header">
+            <img class="title-pic" src="images/logo.png" alt="about me">
+            <div class="scroll-text-container">
+                <h1 class="scroll-text" data-text="Welcome to Més Que Un Fan – The Ultimate Barça Hub!"></h1>
+            </div>
+        </div>
+        <a href="aboutus.html" class="scroll-btn">About us</a>
+    </section>
+    <hr class="divider">
+    <section class="nextmatch">
+        <h1 class="next">Next Match</h1>
+        <div class="countdown">
+            <div id="countdown-timer">
+                <span id="days">00</span>D
+                <span id="hours">00</span>H
+                <span id="minutes">00</span>M
+                <span id="seconds">00</span>S
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <h1 class="new">BARCA FIRST TEAM MATCHES</h1>
+        <div class="matches-container">
+            <button class="scroll-button left" onclick="scrollMatches(-1)">&#10094;</button>
+            <div class="matches">
+                <div class="match past-match">
+                    <img src="images/barcelona-alaves.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Alavés</h2>
+                    <p>Monday, February 2</p>
+                    <p>La Liga</p>
+                    <p>Matchday 22</p>
+                </div>
+                <div class="match past-match">
+                    <img src="images/barcelona-valencia.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Valencia</h2>
+                    <p>Monday, February 6</p>
+                    <p>Copa del Rey</p>
+                    <p>Quarter-finals</p>
+                </div>
+                <div class="match past-match">
+                    <img src="images/barcelona-sevilla.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Sevilla</h2>
+                    <p>Monday, February 9</p>
+                    <p>La Liga</p>
+                    <p>Matchday 23</p>
+                </div>
+                <div class="match next-match">
+                    <img src="images/barca-rayo.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Rayo Vallecano</h2>
+                    <p>Monday, February 17, 1:00 (GMT-7)</p>
+                    <p>La Liga</p>
+                    <p>Matchday 24</p>
+                </div>
+                <div class="match future-match">
+                    <img src="images/barca-palmas.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Las Palmas</h2>
+                    <p>Monday, February 22, 1:00 (GMT-7)</p>
+                    <p>La Liga</p>
+                    <p>Matchday 25</p>
+                </div>
+                <div class="match future-match">
+                    <img src="images/barca-sociedad.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Real Sociedad</h2>
+                    <p>Monday, March 2, 9:00 (GMT-7)</p>
+                    <p>La Liga</p>
+                    <p>Matchday 26</p>
+                </div>
+                <div class="match future-match">
+                    <img src="images/barca-osusana.png" alt="Team Logo">
+                    <h2>FC Barcelona vs Osasuna</h2>
+                    <p>Monday, March 9, 9:00 (GMT-7)</p>
+                    <p>La Liga</p>
+                    <p>Matchday 27</p>
+                </div>
+            </div>
+            <button class="scroll-button right" onclick="scrollMatches(1)">&#10095;</button>
+        </div>
+    </section>
+    <main>
+        <section class="hero">
+            <div class="slides">
+                <div class="slide active" id="slide1">
+                    <div class="hero-content">
+                        <h1>Discover the Legacy of FC Barcelona</h1>
+                        <p>A club with more than a century of passion, triumphs, and unforgettable moments. Explore the rich history of Barça, from its foundation in 1899 to its greatest achievements on the world stage.</p>
+                        <a href="#" class="scroll-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="hero-content">
+                        <h1>Stay Updated with the Latest Barça News</h1>
+                        <p>Breaking news, match highlights, and exclusive interviews—everything you need to stay connected with the heart of FC Barcelona. Don’t miss a single update!</p>
+                        <a href="#news" class="scroll-btn">Watch Video</a>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                    <div class="hero-content">
+                        <h1>Meet the Stars of the Barça Squad</h1>
+                        <p>From legendary captains to rising talents, discover the players who bring Barça’s style to life on the pitch. Get to know the team that carries the club’s legacy forward!</p>
+                        <a href="team.html" class="scroll-btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-btn">←</button>
+                <button class="next-btn">→</button>
+            </div>
+        </section>
+        <h1 class="new" id="news">News</h1>
+        <section class="news">
+        <section class="cards">
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=620&h=465&dpr=2&image=https%3A%2F%2Ficdn.football-espana.net%2Fwp-content%2Fuploads%2F2025%2F02%2FFermin.jpg" alt="Solar panels">
+                <div class="card-content">
+                    <span class="category">One-match suspension confirmed for Barcelona star</span>
+                    <span class="date">February 12 2025</span>
+                    <h3>Barcelona will be aiming to keep pace in the La Liga title race as they host Rayo Vallecano on Monday, but they will do so without an important player. Hansi Flick must do without the services of influential midfielder Fermin Lopez, who will be forced to sit in the stands at the Estadi Olimpic Lluis Companys.</h3>
+                    <a href="https://onefootball.com/en/news/one-match-suspension-confirmed-for-barcelona-star-40700142" class="card-link">↗</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=217&h=217&dpr=2&image=https%3A%2F%2Ficdn.football-espana.net%2Fwp-content%2Fuploads%2F2024%2F07%2FCamp-Nou-renovation.jpg" alt="Abstract dots">
+                <div class="card-content">
+                    <span class="category">Barcelona confident of returning to Spotify Camp Nou on schedule</span>
+                    <span class="date">February 12 2025</span>
+                    <h3>One of the big talking points of the last few months in regards to Barcelona has been the ongoing construction of the new Spotify Camp Nou. The club had hoped to be back at their home stadium by now, but because of numerous delays, they are still playing their matches at the Estadi Olimpic Lluis Companys in Montjuic.</h3>
+                    <a href="https://onefootball.com/en/news/barcelona-confident-of-returning-to-spotify-camp-nou-on-schedule-40699051" class="card-link">↗</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=620&h=465&dpr=2&image=https%3A%2F%2Fwww.grada3.com%2Fus%2Fwp-content%2Fuploads%2F2025%2F02%2Fdeco-flick.jpg" alt="Logistics center">
+                <div class="card-content">
+                    <span class="category">Hansi Flick wants to sign him at no cost to Barça. He’s a world class star and Deco has already given the OK</span>
+                    <span class="date">February 11 2025</span>
+                    <h3>Although one of FC Barcelona‘s greatest virtues is their attacking line, Hansi Flick wants to raise the level even higher and is sounding out the market looking for the best options to find a successor for Lewandowski and competition on the wings for Lamine Yamal and Raphinha...</h3>
+                    <a href="https://onefootball.com/en/news/hansi-flick-wants-to-sign-him-at-no-cost-to-barca-hes-a-world-class-star-and-deco-has-already-given-the-ok-40698921" class="card-link">↗</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=620&h=465&dpr=2&image=https%3A%2F%2Fwww.grada3.com%2Fus%2Fwp-content%2Fuploads%2F2025%2F02%2Fsevilla-fc-v-fc-barcelona-la-liga-ea-sports-1-1.jpg" alt="Logistics center">
+                <div class="card-content">
+                    <span class="category">FC Barcelona already working to keep Raphinha</span>
+                    <span class="date">February 11 2025</span>
+                    <h3>If you think about the FC Barcelona attack, there are three key names that form a lethal trident that makes the number of goals scored by the Catalans a record. Between Raphinha, Lewandowski and Lamine they have scored 65 of the 113 goals that the team has scored so far this season. If we limit it to LaLiga alone, the three of them have scored 36 of the team’s 63 goals.</h3>
+                    <a href="https://onefootball.com/en/news/fc-barcelona-already-working-to-keep-raphinha-40698919" class="card-link">↗</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=620&h=465&dpr=2&image=https%3A%2F%2Ficdn.football-espana.net%2Fwp-content%2Fuploads%2F2025%2F01%2FAraujo-1.jpg" alt="Logistics center">
+                <div class="card-content">
+                    <span class="category">Barcelona Sporting Director says ‘door is open’ if Ronald Araujo decides on departure</span>
+                    <span class="date">February 10 2025</span>
+                    <h3>Barcelona had been at a contract stalemate with star defender Ronald Araujo for the best part of a year when Juventus’ interest arrived in January, and just a week later, the Uruguayan had sorted out a new deal. Yet it has not completely halted talk surrounding his future. Sporting Director Deco has admitted that he would...</h3>
+                    <a href="https://onefootball.com/en/news/barcelona-sporting-director-says-door-is-open-if-ronald-araujo-decides-on-departure-40698879" class="card-link">↗</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://image-service.onefootball.com/transform?w=620&h=465&dpr=2&image=https%3A%2F%2Fbarcauniversal.com%2Fwp-content%2Fuploads%2F2024%2F12%2Fathletic-club-v-real-mallorca-copa-del-rey-final-scaled.jpg" alt="Logistics center">
+                <div class="card-content">
+                    <span class="category">Official: Barcelona learn their opponents for the Copa del Rey semi-finals</span>
+                    <span class="date">February 10 2025</span>
+                    <h3>The draw for the 2024/25 Copa del Rey semi-finals took place today at the Ciudad del Futbol Las Rozas and Barcelona have now learned who they will be facing in the final four. The Blaugrana entered the draw with the possibility of facing historic rivals Real Madrid, Diego Simeone’s Atletico Madrid, or Real Sociedad in the semi-finals.</h3>
+                    <a href="https://onefootball.com/en/news/official-barcelona-learn-their-opponents-for-the-copa-del-rey-semi-finals-40697781" class="card-link">↗</a>
+                </div>
+            </div>
+        </section>
+        </section>
+        <a href="#" class="view-all-btn">Watch more</a>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo-contact">
+                <img src="images/icono.png" alt="DTRE Logo" class="footer-logo">
+                <div class="footer-social">
+                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="images/whatsapp.png" alt="Email"></a>
+            </div>
+                <button class="contact-button">Contact</button>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="aboutus.html">Our Mission</a></li>
+                        <li><a href="aboutus.html">Who We Are</a></li>
+                        <li><a href="aboutus.html">Our History</a></li>
+                        <li><a href="aboutus.html">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Learn more</h4>
+                    <ul>
+                        <li><a href="team.html">Discover the history of each player</a></li>
+                        <li><a href="team.html">Meet the Barcelona team</a></li>
+                        <li><a href="index.html#news">Learn the latest club news</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Barcelona official page</h4>
+                    <ul>
+                        <li><a href="https://www.fcbarcelona.com/en/">Official website </a></li>
+                        <li><a href="https://www.youtube.com/user/fcbarcelona">YouTube channel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Log in / Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <a href="aboutus.html">Legal Notice</a> |
+            <a href="aboutus.html">Privacy Policy</a> |
+            <a href="aboutus.html">Cookie Policy</a>
+        </div>
+    </footer>
+</body>
+</html>
