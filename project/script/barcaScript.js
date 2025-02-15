@@ -15,13 +15,25 @@ document.addEventListener('click', function () {
 const button = document.getElementById('theme-toggle');
 const body = document.body;
 
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    button.textContent = savedTheme === 'dark-mode' ? '☀️' : '🌙';
+} else {
+    body.classList.add('light-mode');
+}
+
 button.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     body.classList.toggle('light-mode');
 
     const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDarkMode ? 'dark-mode' : 'light-mode');
+    
     button.textContent = isDarkMode ? '☀️' : '🌙';
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger-menu');
@@ -157,11 +169,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// History page
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.item');
+    const contentItems = document.querySelectorAll('.content-item');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            items.forEach(i => {
+                i.classList.remove('active');
+                const arrow = i.querySelector('.arrowi');
+                if (arrow) arrow.textContent = '▶';
+            });
+
+            item.classList.add('active');
+            const arrow = item.querySelector('.arrowi');
+            if (arrow) arrow.textContent = '▼';
+
+            const id = item.getAttribute('data-id');
+
+            contentItems.forEach(content => {
+                if (content.id === id) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+});
+
 // Team section
 function scrollTeam(button, direction) {
     const container = button.closest('.team').querySelector('.illustration-container');
     if (container) {
-        const scrollAmount = 300; 
+        const scrollAmount = 500; 
         container.scrollBy({
             left: direction * scrollAmount,
             behavior: 'smooth'
